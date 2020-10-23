@@ -56,21 +56,10 @@ BigInt multiply_int(const BigInt &a, const BigInt &b){
 
   BigInt final = reverse_fxn(c);
 
-  // int a_zeros=0;
-  // for(int i=0; i<a_prime.size(); i++){
-  //   a_zeros = a_zeros+(a_prime.at(i)-'0');
-  // }  
-
-  // int b_zeros=0;
-  // for(int i=0; i<a_prime.size(); i++){
-  //   b_zeros = b_zeros+(b_prime.at(i)-'0');
-  // } 
-  // if(a_zeros==0){
-  //   final = "0";
-  // }
-  // if(b_zeros==0){
-  //   final = "0";
-  // }
+  if((a_prime.at(0)-'0')==0)
+    final = "0";
+  if((b_prime.at(0)-'0')==0)
+    final = "0";
 
 
   return final;
