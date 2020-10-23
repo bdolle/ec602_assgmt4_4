@@ -21,7 +21,16 @@ Poly add_poly(const Poly &a, const Poly &b){
     c.at(i) = x.at(i)+y.at(i);
   }
 
-  return c;
+  
+while (!c.empty() && c.at(c.size() - 1) == 0) {
+    c.pop_back();
+}
+  if(c.size()==0){
+    c.push_back(0);
+  }
+
+
+    return c;
 
 }
 
@@ -41,6 +50,14 @@ Poly multiply_poly(const Poly & a, const Poly & b){
   // for(int i=0; i<c.size();i++){
   // std::cout << c.at(i) << "\n";
   // }
+
+  if(a.size() ==1 && a.at(0)==0){
+    Poly d(1,0);
+    c=d ;}
+  if(b.size() == 1 && b.at(0)==0){
+    Poly d(1,0);
+    c=d ;}
+
   return c;
 }
 
